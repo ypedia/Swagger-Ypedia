@@ -1,0 +1,135 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Ypêdia Documentation",
+    "description": "Ypêdia API Rest",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://3nwc83jh83.execute-api.us-east-1.amazonaws.com/v1",
+      "description": "Development server"
+    },
+    {
+      "url": "https://dljo9kl0s2.execute-api.us-east-1.amazonaws.com/v1",
+      "description": "Homolog server"
+    },
+    {
+      "url": "https://poq1vwhcdi.execute-api.us-east-1.amazonaws.com/v1",
+      "description": "Production server"
+    }
+  ],
+  "paths": {
+    "/posts/category": {
+      "summary": "Post Category",
+      "description": "Post Category",
+      "get": {
+        "tags": ["Posts"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "example": [
+                    {
+                      "slug": "como-organizar",
+                      "name": "Como organizar",
+                      "image": "https://ypemiscellaneous-storagenestedstack-ypefilebucket-kdl9ei6sdbh5.s3.amazonaws.com/icons/como-organizar.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAVWRHF7D5Z2KBED4D%2F20210505%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210505T191228Z&X-Amz-Expires=604800&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEJT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIC5GInVY6hV8wFCCp96hpgRVohwr7VWDOtWyu7IP86T9AiBxOErM%2Bdclw%2FHDzupE51hjPxaG%2BS6CfFDOb5cbmW3FCCr%2FAQgcEAEaDDM5MTk5Nzk0NjEwNyIMtHNtWwNj1LjLPgULKtwBhdxWi7KL%2FreUqSyl3wdZAsSScSPpOI6XSuKzn6tqE8v4VUAzwopQjRpo1BpnOPaj0b2TERcwj%2FfmF%2BbuhTHOzmfZfngk%2ByST8ULe3%2FAf%2BwHcQmBIfPoeVocO%2Bv0CvrGEBGgictffBcAoNVIM4n%2Fxci0NsozIXU6e%2BYIDVpdOzjib6byT0CfxH0ZfqSDDNOEaCLVdlF5mnPIzHKsDPfCeWndAhTmEGKGVB0galCf3jj3%2BvaJmrapC4x1BEd5NCr1qGau6GcH8bgEnLe%2BZY%2FKSfsTBztV6lFLz%2FVQFDTCZ3MuEBjrhAcx5JEA1fOTI2HtJSFWw4VK3IBE5mp69TbBjPODUFG%2F0kaX%2B%2Fu2Pi32sv72fwzKHn05fOr7NH8mwJoi3oCzgS4ajJwH2X6X%2BA%2B6IqrYU3FZS63oHRTUHEOmyqn8UMZadRyXTEzU7JYXlphSpHowxsO%2BaCjD2AKdk%2FyF6h3ocXC8T2mCt%2BTIxP7lZ5XjF%2BZSucfQfZaPrWhzO%2BDn9U4QYddZ1QeVQlOjlgQkU7QfcmQIDH%2FyL%2BnOxm6vb0feIPAf4gj%2FRYBJ4mbQrjuWpuEYhv8%2FSaByJmfh7oRGX7PVBA0pJYA%3D%3D&X-Amz-Signature=dc404ed76e89b1668c36bd32c999ef42e1c609d3021d1fa6c8754dab90e536dc&X-Amz-SignedHeaders=host"
+                    },
+                    {
+                      "slug": "como-lavar",
+                      "name": "Como lavar",
+                      "image": "https://ypemiscellaneous-storagenestedstack-ypefilebucket-kdl9ei6sdbh5.s3.amazonaws.com/icons/como-lavar.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAVWRHF7D5Z2KBED4D%2F20210505%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210505T191228Z&X-Amz-Expires=604800&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEJT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIC5GInVY6hV8wFCCp96hpgRVohwr7VWDOtWyu7IP86T9AiBxOErM%2Bdclw%2FHDzupE51hjPxaG%2BS6CfFDOb5cbmW3FCCr%2FAQgcEAEaDDM5MTk5Nzk0NjEwNyIMtHNtWwNj1LjLPgULKtwBhdxWi7KL%2FreUqSyl3wdZAsSScSPpOI6XSuKzn6tqE8v4VUAzwopQjRpo1BpnOPaj0b2TERcwj%2FfmF%2BbuhTHOzmfZfngk%2ByST8ULe3%2FAf%2BwHcQmBIfPoeVocO%2Bv0CvrGEBGgictffBcAoNVIM4n%2Fxci0NsozIXU6e%2BYIDVpdOzjib6byT0CfxH0ZfqSDDNOEaCLVdlF5mnPIzHKsDPfCeWndAhTmEGKGVB0galCf3jj3%2BvaJmrapC4x1BEd5NCr1qGau6GcH8bgEnLe%2BZY%2FKSfsTBztV6lFLz%2FVQFDTCZ3MuEBjrhAcx5JEA1fOTI2HtJSFWw4VK3IBE5mp69TbBjPODUFG%2F0kaX%2B%2Fu2Pi32sv72fwzKHn05fOr7NH8mwJoi3oCzgS4ajJwH2X6X%2BA%2B6IqrYU3FZS63oHRTUHEOmyqn8UMZadRyXTEzU7JYXlphSpHowxsO%2BaCjD2AKdk%2FyF6h3ocXC8T2mCt%2BTIxP7lZ5XjF%2BZSucfQfZaPrWhzO%2BDn9U4QYddZ1QeVQlOjlgQkU7QfcmQIDH%2FyL%2BnOxm6vb0feIPAf4gj%2FRYBJ4mbQrjuWpuEYhv8%2FSaByJmfh7oRGX7PVBA0pJYA%3D%3D&X-Amz-Signature=9ec596cc8b8b69462ce17b5f3daecca38187d25a2b2ab63f0d1a08aaa6fccedc&X-Amz-SignedHeaders=host"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Cors"
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/posts/highlight": {
+      "summary": "Post highlight",
+      "description": "Post highlight",
+      "get": {
+        "tags": ["Posts"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "slug": { "type": "string" },
+                    "name": { "type": "string" },
+                    "image": { "type": "string" }
+                  }
+                },
+                "example": [
+                  {
+                    "id": "1069"
+                  },
+                  {
+                    "id": "1138"
+                  },
+                  {
+                    "id": "1288"
+                  },
+                  {
+                    "id": "1128"
+                  }
+                ]
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Cors"
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "api_key": {
+        "type": "apiKey",
+        "name": "x-api-key",
+        "in": "header"
+      },
+      "YpediaAuthorizer": {
+        "type": "apiKey",
+        "name": "Authorization token",
+        "in": "header",
+        "x-amazon-apigateway-authtype": "custom"
+      }
+    }
+  }
+}

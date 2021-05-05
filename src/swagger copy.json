@@ -1,0 +1,811 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Ypedia",
+    "description": "Api Rest to Ypedia",
+    "version": "1.0.0"
+  },
+  "host": "3nwc83jh83.execute-api.us-east-1.amazonaws.com",
+  "basePath": "/v1",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/admin": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "YpediaAdminAuthorizer": []
+          },
+          {
+            "api_key": []
+          }
+        ]
+      },
+      "post": {
+        "responses": {
+          "201": {
+            "description": "201 response",
+            "schema": {
+              "$ref": "#/definitions/Empty"
+            },
+            "headers": {
+              "Access-Control-Allow-Origin": {
+                "type": "string"
+              },
+              "Access-Control-Allow-Methods": {
+                "type": "string"
+              },
+              "Access-Control-Allow-Headers": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "YpediaAdminAuthorizer": []
+          },
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/admin/me": {
+      "get": {
+        "responses": {},
+        "security": [
+          {
+            "YpediaAdminAuthorizer": []
+          },
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/admin/{id}": {
+      "get": {
+        "responses": {},
+        "security": [
+          {
+            "YpediaAdminAuthorizer": []
+          },
+          {
+            "api_key": []
+          }
+        ]
+      },
+      "delete": {
+        "responses": {},
+        "security": [
+          {
+            "YpediaAdminAuthorizer": []
+          },
+          {
+            "api_key": []
+          }
+        ]
+      },
+      "patch": {
+        "responses": {},
+        "security": [
+          {
+            "YpediaAdminAuthorizer": []
+          },
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/auth/login": {
+      "post": {
+        "responses": {},
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/auth/login/admin": {
+      "post": {
+        "responses": {},
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/auth/request/password": {
+      "post": {
+        "responses": {},
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/auth/reset": {
+      "post": {
+        "responses": {},
+        "security": [
+          {
+            "YpediaAuthorizer": []
+          },
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/calculator": {
+      "get": {
+        "responses": {},
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/config": {
+      "get": {
+        "responses": {},
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/config/terms-of-use": {
+      "get": {
+        "responses": {},
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/config/terms-of-use/accept": {
+      "post": {
+        "responses": {},
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/contacts": {
+      "post": {
+        "responses": {},
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/device": {
+      "post": {
+        "responses": {},
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/domain": {
+      "get": {
+        "responses": {},
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/faq": {
+      "get": {
+        "responses": {},
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      },
+      "patch": {
+        "responses": {},
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/game/account": {
+      "post": {
+        "responses": {},
+        "security": [
+          {
+            "YpediaAuthorizer": []
+          },
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/game/card": {
+      "get": {
+        "responses": {},
+        "security": [
+          {
+            "YpediaAuthorizer": []
+          },
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/game/ranking": {
+      "get": {
+        "responses": {},
+        "security": [
+          {
+            "YpediaAuthorizer": []
+          },
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/game/restart": {
+      "patch": {
+        "responses": {},
+        "security": [
+          {
+            "YpediaAuthorizer": []
+          },
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/game/roulette": {
+      "get": {
+        "responses": {},
+        "security": [
+          {
+            "YpediaAuthorizer": []
+          },
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/midia": {
+      "get": {
+        "responses": {},
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/naturefriend": {
+      "get": {
+        "responses": {},
+        "security": [
+          {
+            "YpediaAuthorizer": []
+          },
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/newsletter/subscribe": {
+      "post": {
+        "responses": {}
+      }
+    },
+    "/newsletter/unsubscribe": {
+      "post": {
+        "responses": {}
+      }
+    },
+    "/notification/send-raw": {
+      "post": {
+        "responses": {},
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/posts/add-favorite": {
+      "patch": {
+        "responses": {},
+        "security": [
+          {
+            "YpediaAuthorizer": []
+          },
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/posts/category": {
+      "tags": ["Posts"],
+      "summary": "Post Category",
+      "description": "Post Category",
+      "get": {
+        "responses": {},
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/posts/highlight": {
+      "tags": ["Posts"],
+      "summary": "Posts highlight",
+      "description": "Posts highlight",
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "example": {
+                    "name": "Category name example",
+                    "description": "Category description example"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "security": [
+          {
+            "api_key": [""]
+          }
+        ]
+      }
+    },
+    "/posts/remove-favorite": {
+      "patch": {
+        "responses": {},
+        "security": [
+          {
+            "YpediaAuthorizer": []
+          },
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/posts/search": {
+      "get": {
+        "responses": {},
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/posts/view": {
+      "post": {
+        "responses": {},
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/posts/{category}": {
+      "get": {
+        "responses": {},
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/products": {
+      "get": {
+        "responses": {},
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/products/selectives": {
+      "get": {
+        "responses": {},
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/promotion/{id}": {
+      "get": {
+        "responses": {},
+        "security": [
+          {
+            "YpediaAuthorizer": []
+          },
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/question/{promotion}/{id}": {
+      "get": {
+        "responses": {},
+        "security": [
+          {
+            "YpediaAuthorizer": []
+          },
+          {
+            "api_key": []
+          }
+        ]
+      },
+      "post": {
+        "responses": {},
+        "security": [
+          {
+            "YpediaAuthorizer": []
+          },
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/regions": {
+      "get": {
+        "responses": {},
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/review": {
+      "post": {
+        "responses": {},
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/sac": {
+      "post": {
+        "responses": {},
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/sac/store": {
+      "post": {
+        "responses": {},
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/search": {
+      "get": {
+        "responses": {},
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/users": {
+      "post": {
+        "responses": {},
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/users/image/upload": {
+      "get": {
+        "responses": {},
+        "security": [
+          {
+            "YpediaAuthorizer": []
+          },
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/users/me": {
+      "get": {
+        "responses": {},
+        "security": [
+          {
+            "YpediaAuthorizer": []
+          },
+          {
+            "api_key": []
+          }
+        ]
+      },
+      "delete": {
+        "responses": {},
+        "security": [
+          {
+            "YpediaAuthorizer": []
+          },
+          {
+            "api_key": []
+          }
+        ]
+      },
+      "patch": {
+        "responses": {},
+        "security": [
+          {
+            "YpediaAuthorizer": []
+          },
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/users/me/privacy": {
+      "post": {
+        "responses": {},
+        "security": [
+          {
+            "YpediaAuthorizer": []
+          },
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/users/me/purchase-list": {
+      "get": {
+        "responses": {},
+        "security": [
+          {
+            "YpediaAuthorizer": []
+          },
+          {
+            "api_key": []
+          }
+        ]
+      },
+      "post": {
+        "responses": {},
+        "security": [
+          {
+            "YpediaAuthorizer": []
+          },
+          {
+            "api_key": []
+          }
+        ]
+      },
+      "patch": {
+        "responses": {},
+        "security": [
+          {
+            "YpediaAuthorizer": []
+          },
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/users/me/purchase-list/{id}": {
+      "delete": {
+        "responses": {},
+        "security": [
+          {
+            "YpediaAuthorizer": []
+          },
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/userstamp": {
+      "post": {
+        "responses": {},
+        "security": [
+          {
+            "YpediaAuthorizer": []
+          },
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/userstamp/lucky-prize": {
+      "post": {
+        "responses": {},
+        "security": [
+          {
+            "YpediaAuthorizer": []
+          },
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/userstamp/xmas": {
+      "post": {
+        "responses": {},
+        "security": [
+          {
+            "YpediaAuthorizer": []
+          },
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/userstamp/ype70": {
+      "post": {
+        "responses": {},
+        "security": [
+          {
+            "YpediaAuthorizer": []
+          },
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/wash-hands": {
+      "post": {
+        "responses": {}
+      },
+      "delete": {
+        "responses": {}
+      }
+    },
+    "/webhook/delete-facebook-user": {
+      "get": {
+        "responses": {}
+      },
+      "post": {
+        "responses": {}
+      }
+    },
+    "/wherebuy": {
+      "get": {
+        "responses": {},
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/wherebuy/digital": {
+      "get": {
+        "responses": {},
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    }
+  },
+  "securityDefinitions": {
+    "YpediaAuthorizer": {
+      "type": "apiKey",
+      "name": "Authorization",
+      "in": "header",
+      "x-amazon-apigateway-authtype": "custom"
+    },
+    "api_key": {
+      "type": "apiKey",
+      "name": "x-api-key",
+      "in": "header"
+    },
+    "YpediaAdminAuthorizer": {
+      "type": "apiKey",
+      "name": "Authorization",
+      "in": "header",
+      "x-amazon-apigateway-authtype": "custom"
+    }
+  },
+  "definitions": {
+    "Empty": {
+      "type": "object",
+      "title": "Empty Schema"
+    }
+  }
+}
