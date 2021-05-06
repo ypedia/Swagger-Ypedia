@@ -1,8 +1,0 @@
-{
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
-  ],
-  "builds": [
-    { "src": "server.ts", "use": "@now/node-server" }
-  ]
-}

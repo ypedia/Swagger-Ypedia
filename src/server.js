@@ -1,8 +1,8 @@
-import express from 'express';
-import swaggerUi from 'swagger-ui-express';
+const express = require('express');
+const swaggerUi = require('swagger-ui-express');
 
-import { router } from './routes';
-import swaggerFile from './swagger.json';
+const { router } = require('./routes');
+const swaggerFile = require('./swagger.json');
 
 const PORT = 3333;
 const app = express();
