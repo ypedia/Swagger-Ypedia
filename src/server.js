@@ -4,7 +4,7 @@ const swaggerUi = require('swagger-ui-express');
 const { router } = require('./routes');
 const swaggerFile = require('./swagger.json');
 
-const PORT = 3333;
+const PORT = process.env.PORT || 3333;
 const app = express();
 
 app.use(express.json());

@@ -1,8 +1,8 @@
 {
   "author": "Henrique Leão",
   "scripts": {
-    "start": "node src/server.js",
-    "dev": "node src/server.js"
+    "start": "node ./src/server.js",
+    "dev": "node ./src/server.js"
   },
   "dependencies": {
     "express": "^4.17.1",
