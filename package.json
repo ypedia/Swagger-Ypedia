@@ -2,7 +2,7 @@
   "author": "Henrique Leão",
   "scripts": {
     "start": "node ./src/server.js",
-    "dev": "node ./src/server.js"
+    "dev": "nodemon ./src/server.js"
   },
   "dependencies": {
     "express": "^4.17.1",
@@ -16,6 +16,7 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-import-helpers": "^1.1.0",
     "eslint-plugin-prettier": "^3.4.0",
+    "nodemon": "^2.0.7",
     "prettier": "^2.2.1"
   }
 }
